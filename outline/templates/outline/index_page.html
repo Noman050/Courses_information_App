@@ -1,0 +1,14 @@
+{% extends 'outline/layout.html' %}
+
+{% block title %}
+    Course Outline.
+{% endblock %}
+
+{% block body %}
+    <h1>Course Outline.</h1>
+    <ul>
+        {% for topic in topics %}
+            <li><a href="{% url 'topic_page' topic %}">{{ topic }}.</a></li>
+        {% endfor %}
+    </ul>
+{% endblock %}

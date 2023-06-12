@@ -1,0 +1,17 @@
+{% extends 'outline/layout.html' %}
+
+{% block title %}
+    Topic.
+{% endblock %}
+
+{% block body %}
+    <h1>Topic.</h1>
+    <ul>
+        <h2>{{ title }}.</h2>
+        <p>{{ content }}.<p>
+    </ul>
+    <div class="urlDiv">
+        <a href="{% url 'edit_page' plain %}">Click Here To Edit The Topic.</a>
+    </div>
+    
+{% endblock %}

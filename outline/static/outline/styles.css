@@ -1,0 +1,59 @@
+body {
+    margin: 0;
+    background-color: white;
+}
+.error{
+    color: red;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+code {
+    white-space: pre;
+}
+
+h1 {
+    margin-top: 0px;
+    padding-top: 20px;
+}
+
+textarea {
+    height: 70vh;
+    width: 80%;
+}
+
+.main {
+    padding: 10px;
+}
+
+.search {
+    width: 100%;
+    font-size: 15px;
+    line-height: 15px;
+}
+
+.sidebar {
+    /* background-color: #cedef8; */
+    background-color: orange;
+    color: lemonchiffon;
+    height: 100vh;
+    padding: 20px;
+    font-weight: bold;
+}
+
+.sidebar h2 {
+    margin-top: 5px;
+    font-weight: bolder;
+}
+.sidebar a {
+    color: white;
+}
+.sidebar a:hover {
+    color:black;
+}
+.urlDiv{
+    padding: 20px;
+    margin: 20px;
+}
+.urlDiv a:hover{
+    color: black;
+}

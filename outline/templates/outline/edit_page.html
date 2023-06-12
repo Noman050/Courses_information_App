@@ -1,0 +1,14 @@
+{% extends 'outline/layout.html' %}
+
+{% block title %}
+    Edit Page - {{ title }}.
+{% endblock %}
+
+{% block body %}
+    <h1>Edit Page - {{ title }}.</h1>
+    <form method="post" action="{% url 'edit_page' title=title %}">
+        {% csrf_token %}
+        <textarea style="height: 76vh; width: 90%;" id="content" name="content" rows="10" required>{{ content }}.</textarea><br><br>
+        <input type="submit" value="Save">
+    </form>
+{% endblock %}

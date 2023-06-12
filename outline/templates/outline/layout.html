@@ -1,0 +1,46 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>{% block title %}{% endblock %}</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link href="{% static 'outline/styles.css' %}" rel="stylesheet">
+    </head>
+    <body>
+        <div class="row">
+            <div class="sidebar col-lg-2 col-md-3">
+                <h2>Course App.</h2>
+                <form method="POST" action="{% url 'search_page' %}">
+                    {% csrf_token %}
+                    <input class="search" type="text" name="query" placeholder="Search Topic">
+                </form>
+                <br>
+                {% block nav %}
+                    <div>
+                        <a href="{% url 'index_page' %}">Home Page.</a>
+                    </div>
+                    <div>
+                        <a href="{% url 'new_page' %}">New Topic Page.</a>
+                    </div>
+                    <div>
+                        <a href="{% url 'random_page' %}">Random Page.</a>
+                    </div>
+                    
+                {% endblock %}
+                <div class="page-footer font-small blue" style="padding-top: 400px;">
+                    <div class="footer-copyright text-center py-3">© 2023 Copyright:
+                        <br>
+                        <a href="https://github.com/Noman050">(CIIT/FA19-BSE-050/VHR).</a>
+                      </div>
+                </div>
+            </div>
+            <div class="main col-lg-10 col-md-9">
+                {% block body %}
+                {% endblock %}
+            </div>
+            
+        </div>
+    </body>
+</html>

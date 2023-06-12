@@ -1,0 +1,17 @@
+{% extends 'outline/layout.html' %}
+
+{% block title %}
+    Create New Topic.
+{% endblock %}
+
+{% block body %}
+    <h1>Create New Topic.</h1>
+    <form method="post" action="{% url 'new_page' %}">
+        {% csrf_token %}
+        <label for="title">Title:</label><br>
+        <input type="text" id="title" name="title" required><br><br>
+        <label for="content">Content:</label><br>
+        <textarea style="height: 60vh; width: 90%;" id="content" name="content" rows="10" required></textarea><br><br>
+        <input type="submit" value="Save">
+    </form>
+{% endblock %}
